@@ -30,4 +30,29 @@ foreach ($beer as $llave => $valor) {
   echo $llave . " - " . $valor . "<br>";
 }
 
+
+# ACLARACION: EXISTEN DOS FORMAS DE HACER UN FOR EACH
+
+# 1. Estilo con llaves {}
+# Este es el estilo más común, similar a otros lenguajes como Java o JavaScript.
+
+foreach ($usuarios as $user) {
+    echo "<tr>";
+    echo "<td>" . $user['username'] . "</td>";
+    echo "<td>" . $user['password'] . "</td>";
+    echo "<td>" . $user['nombre'] . "</td>";
+    echo "</tr>";
+}
+
+# 2. Estilo con endforeach;
+# Este estilo se usa más en HTML embebido dentro de PHP, como en archivos .php con código HTML.
+
+<?php foreach ($usuarios as $user): ?>
+    <tr>
+        <td><?= $user['username']; ?></td>
+        <td><?= $user['password']; ?></td>
+        <td><?= $user['nombre']; ?></td>
+    </tr>
+<?php endforeach; ?>
+
 ?>
