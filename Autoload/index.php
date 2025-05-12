@@ -8,6 +8,8 @@
 // USAREMOS UNA FUNCION QUE DETECTA CADA VEZ QUE LLAMAMOS A UNA CLASE QUE NO HA SIDO CARGADA - spl_autoload_register
 // Este metodo necesita que le pasemos dentro una funcion callback, y esa funcion recibe por parametro el nombre de la clase que queremos cargar.
 
+// Poner el autoload en el index.php, hara que se cargue automaticamente por debajo un requiere_once, de cualquier clase que se necesite, cada vez que se use una clase de cualquier namespace
+
 use Controllers\CourseController; // LOS USE SIRVEN PARA IMPORTAR CLASES
 use Models\Course;
 
